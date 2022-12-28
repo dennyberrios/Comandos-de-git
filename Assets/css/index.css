@@ -1,0 +1,129 @@
+:root {
+    --cor-de-fundo: #000000;
+    --cor-de-titulo: #355BE1;
+    --cor-de-subtitulo: #7C93E6;
+    --cor-paragrafo: #00f829;
+    --cor-comentario: #c6c4c4;
+    --cor-de-fundo-shadow: #061032;
+    --cor-de-hoverLink: #263f9c;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    line-height: 1.3;
+    margin: 50px 0;
+    font-family: 'Silkscreen', verdana;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--cor-comentario);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--cor-de-fundo);
+    border-radius: 20px;
+    border: 2px solid var(--cor-comentario);
+}
+
+main, header {
+    display: flex;
+    justify-content: center;
+}
+
+[data-anime] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+    transition: .5s;
+}
+
+[data-anime="top"] {
+    opacity: 0;
+    transform: translate3d(0, -50px, 0);
+}
+
+[data-anime="left"] {
+    opacity: 0;
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-anime="right"] {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime="bottom"] {
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+}
+
+[data-anime].animation {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+section {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box {
+    width: 70%;
+}
+
+.itens {
+    width: 100%;
+}
+
+header > h1 {
+    margin: 30px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--cor-de-titulo);
+}
+
+section > .box > h2 {
+    margin: 15px 0;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: verdana;
+    color: var(--cor-de-subtitulo);
+}
+
+.codigo {
+    margin: 6px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--cor-paragrafo);
+    text-shadow: 0 0 2px var(--cor-de-fundo-shadow);
+}
+
+.codigo::before{
+    content: url(./../svg/git.svg) " ";
+}
+
+.comentario {
+    margin: 6px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--cor-comentario);
+    text-align: justify;
+}
+
+.itens > p > a{
+    color: var(--cor-de-titulo);
+    margin-top: 50px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.itens > p > a:hover {
+    transition: .3s;
+    color: var(--cor-de-hoverLink);
+}

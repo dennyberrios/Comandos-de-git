@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./Assets/svg/git.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./Assets/css/reset.css" />
+    <link rel="stylesheet" href="./Assets/css/index.css" />
+    <script src="./js/index.js" defer></script>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
+      rel="stylesheet"
+    />
+    <title>Git-Github</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Comandos do git.</h1>
+    </header>
+    <main>
+      <section>
+        <div class="box" data-anime>
+          <h2>remote</h2>
+          <div class="itens">
+            <div>
+              <p class="codigo">git remote</p>
+            </div>
+            <p class="comentario">
+              Lista todos os repósitorios remoto que o repositório local
+              conhece.
+            </p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git remote add origin (link do github)</p>
+            <p class="comentario">
+              O comando git remote permite criar, ver e excluir conexões com
+              outros repositórios. As conexões remotas são mais parecidas com
+              marcadores em vez de links diretos para outros repositórios.
+            </p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git remote -v</p>
+            <p class="comentario">Mostra todos indereços.</p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git remote rename nomo antigo novo nome</p>
+            <p class="comentario">
+              Renomea o repositório. Exemplo: git remote rename nome
+              antigo(origin) nome novo (Local).
+            </p>
+          </div>
+        </div>
+
+        <div class="box" data-anime="top">
+          <h2>mesclagem</h2>
+          <div class="itens">
+            <p class="codigo">git marge nome da outra branch</p>
+            <p class="comentario">
+              Cria um commit de junção de duas branch. para salvar a mensagem e
+              confirma digite :x pressione enter.
+            </p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git rebase nome da branch</p>
+            <p class="comentario">
+              Traz os commits de uma branch para a outra.
+            </p>
+          </div>
+        </div>
+
+        <div class="box" data-anime="left">
+          <h2>alterações no arquivo e commits</h2>
+          <div class="itens">
+            <p class="codigo">git checkout -- nome do arquivo</p>
+            <p class="comentario">Descarta alterações.</p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git reset head nome do arquivo</p>
+            <p class="comentario">
+              desfaz as alterações que já foi marcadas para commita.
+            </p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git revert Hash do commit</p>
+            <p class="comentario">
+              Desfaz o commit. <br /><br />
+              Obs: Em sua essência, o sistema de controle de versão do Git é um
+              sistema de arquivos endereçável por conteúdo. Ele usa a função de
+              hash para nomear o conteúdo. para encontra o Hash basta digita no
+              seu terminal dentro da pasta do arquivo, git log --oneline. para
+              mais informações sobre o hash acesse
+              <a
+                href="https://git-scm.com/docs/hash-function-transition/"
+                target="_blank"
+                >aqui.</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="box" data-anime="right">
+          <h2>salva e pega os arquivos</h2>
+          <div class="itens">
+            <p class="codigo">git stash</p>
+            <p class="comentario">
+              Salva todas as alterações para um local temporario.
+            </p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git stash list</p>
+            <p class="comentario">
+              Mostra uma lista de tudo que esta salvo no stash.
+            </p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git stash apply 0</p>
+            <p class="comentario">Aplica as modificações.</p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git stash drop</p>
+            <p class="comentario">Remove a lista.</p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git stash pop</p>
+            <p class="comentario">Pega e remove a ultima alteração.</p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git checkout Hash</p>
+            <p class="comentario">
+              Volta ate o commit de hash. <br /><br />
+              Obs: Em sua essência, o sistema de controle de versão do Git é um
+              sistema de arquivos endereçável por conteúdo. Ele usa a função de
+              hash para nomear o conteúdo. para encontra o Hash basta digita no
+              seu terminal dentro da pasta do arquivo, git log --oneline. para
+              mais informações sobre o hash acesse
+              <a
+                href="https://git-scm.com/docs/hash-function-transition/"
+                target="_blank"
+                >aqui.</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="box" data-anime="bottom">
+          <h2>compara commits</h2>
+          <div class="itens">
+            <p class="codigo">git diff</p>
+            <p class="comentario">
+              O git diff é um comando Git multiuso que, quando executado,
+              realiza uma função de comparação nas fontes de dados Git. Essas
+              fontes de dados podem ser commits, ramificações, arquivos e
+              outros.
+            </p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git diff Hash..Hash</p>
+            <p class="comentario">
+              Compara dois commits. <br /><br />
+
+              Obs: Em sua essência, o sistema de controle de versão do Git é um
+              sistema de arquivos endereçável por conteúdo. Ele usa a função de
+              hash para nomear o conteúdo. para encontra o Hash basta digita no
+              seu terminal dentro da pasta do arquivo, git log --oneline. para
+              mais informações sobre o hash acesse
+              <a
+                href="https://git-scm.com/docs/hash-function-transition/"
+                target="_blank"
+                >aqui.</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="box" data-anime="top">
+          <h2>cria e sobi tag</h2>
+          <div class="itens">
+            <p class="codigo">git tag -a " nome da versão "</p>
+            <p class="comentario">
+              Cria um marco na aplicação. exemplo: git tag -a V0.1.0
+            </p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git tag -a " nome da versão " -m " mensagem "</p>
+            <p class="comentario">
+              O -m adiciona uma mensagem na tag antes do commit. exemplo: git
+              tag -a V0.1.0 -m " Primeira versão do projeto "
+            </p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git push nome da branch versão</p>
+            <p class="comentario">
+              Envia a tag. exemplo: git push master V0.1.0
+            </p>
+          </div>
+        </div>
+
+        <div class="box" data-anime="left">
+          <h2>Comandos basicos do terminal</h2>
+          <div class="itens">
+            <p class="codigo">dir</p>
+            <p class="comentario">
+              O comando dir exibe, em formato largo, uma lista alfabética dos
+              nomes de arquivo correspondentes em cada diretório e pausa cada
+              vez que a tela é preenchida até que você pressione qualquer tecla
+              para continuar.
+            </p>
+          </div>
+          <div class="itens">
+            <p class="codigo">cd nome da pasta</p>
+            <p class="comentario">Entra na pasta.</p>
+          </div>
+          <div class="itens">
+            <p class="codigo">cd ..</p>
+            <p class="comentario">volta uma pasta.</p>
+          </div>
+          <div class="itens">
+            <p>ls</p>
+            <p class="comentario">Mostra o que tem dentro da pasta.</p>
+          </div>
+          <div class="itens">
+            <p class="codigo">mkdir nome da pasta</p>
+            <p class="comentario">Nomea e cria uma pasta.</p>
+          </div>
+        </div>
+
+        <div class="box" data-anime="right">
+          <h2>Configuração do usuario no git.</h2>
+          <div class="itens">
+            <p class="codigo">git config --global user.name "seu nome"</p>
+            <p class="comentario">
+              Configurar o nome de usuário globalmente no Git para todos os
+              repositórios.
+            </p>
+          </div>
+          <div class="itens">
+            <p class="codigo">
+              git config --global user.email "seu email cadastrado no github"
+            </p>
+            <p class="comentario">
+              Configurar o e-mail de usuário globalmente no Git para todos os
+              repositórios.
+            </p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git config --local user.name "seu nome"</p>
+            <p class="comentario">
+              Configurar o nome de usuário local no Git para um repositório.
+            </p>
+          </div>
+          <div class="itens">
+            <p class="codigo">
+              git config --local user.email "seu email cadastrado no github"
+            </p>
+            <p class="comentario">
+              Configurar o e-mail de usuário local no Git para um repositório.
+            </p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git config --list</p>
+            <p class="comentario">
+              Lista todas as configurações que o Git conseguir encontrar naquele
+              momento.
+            </p>
+          </div>
+        </div>
+
+        <div class="box" data-anime="bottom">
+          <h2>branchs</h2>
+          <div class="itens">
+            <p class="codigo">git branch</p>
+            <p class="comentario">Ver todas as branch</p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git branch nome da branch</p>
+            <p class="comentario">Cria uma branch com o nome escolhido</p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git checkout nome da branch</p>
+            <p class="comentario">Muda para outra branch</p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git checkout -b nome da branck</p>
+            <p class="comentario">Cria e muda para a branck criada</p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git branch -m main</p>
+            <p class="comentario">
+              O comando git branch permite criar, listar, renomear e excluir
+              ramificações. Ele não permite alternar entre as ramificações ou
+              reunir um histórico bifurcado de novo.
+            </p>
+          </div>
+        </div>
+
+        <div class="box" data-anime="top">
+          <h2>Subir projetos no github.</h2>
+          <div class="itens">
+            <p class="codigo">git init</p>
+            <p class="comentario">
+              O comando git init cria um novo repositório do Git. Ele pode ser
+              usado para converter um projeto existente e não versionado em um
+              repositório do Git ou inicializar um novo repositório vazio.
+            </p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git init --bare</p>
+            <p class="comentario">
+              A marcação --bare cria um repositório que não tem um diretório
+              ativo, tornando impossível editar arquivos e fazer commit de
+              alterações nesse repositório. Você cria um repositório vazio para
+              git push e git pull, mas nunca faz o commit direto para ele.
+            </p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git add .</p>
+            <p class="comentario">
+              O comando git add adiciona uma alteração no diretório ativo à área
+              de staging. Ele diz ao Git que você quer incluir atualizações a um
+              arquivo específico no próximo commit. No entanto, git add não tem
+              efeito real e significativo no repositório — as alterações não são
+              gravadas mesmo até você executar git commit .
+            </p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git status</p>
+            <p class="comentario">
+              Mostra o statu da aplicação no repositório local.
+            </p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git commit -m " mensagem "</p>
+            <p class="comentario">
+              O comando git commit captura um instantâneo das mudanças
+              preparadas do projeto no momento. Os instantâneos com commit podem
+              ser considerados versões "seguras" de um projeto, o Git nunca os
+              altera, a menos que você peça a ele.
+            </p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git push -u origin main</p>
+            <p class="comentario">
+              O comando git push é usado para enviar o conteúdo do repositório
+              local para um repositório remoto.
+            </p>
+          </div>
+        </div>
+
+        <div class="box" data-anime="left">
+          <h2>Comando de logs</h2>
+          <div class="itens">
+            <p class="codigo">git log</p>
+            <p class="comentario">
+              O comando git log é a ferramenta básica do Git para explorar o
+              histórico de um repositório. É usado quando se precisa encontrar
+              uma versão específica de um projeto ou saber quais alterações vão
+              ser implantadas por meio do merge de uma ramificação de recurso.
+            </p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git log -p</p>
+            <p class="comentario">
+              Mostra as informações do commit e as alterações.
+            </p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git log -n 2</p>
+            <p class="comentario">Mostra os dois ultimos commits.</p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git log --oneline</p>
+            <p class="comentario">
+              A opção --oneline mostra informações sobre os commits em uma única
+              linha, facilitando a navegação rápida entre commits.
+            </p>
+          </div>
+          <div class="itens">
+            <p class="codigo">git log --graph</p>
+            <p class="comentario">
+              Mostra as linhas específicas de desenvolvimento.
+            </p>
+          </div>
+        </div>
+
+        <div class="box" data-anime="right">
+          <h2>Clona conteúdo do github.</h2>
+          <div class="itens">
+            <p class="codigo">git clone ( link do repositorio )</p>
+            <p class="comentario">
+              O git clone é usado sobretudo para apontar para um repositório
+              existente e fazer um clone ou cópia deste repositório no novo
+              diretório, em outro local. O repositório original pode estar
+              localizado no sistema de arquivos local ou em protocolos com
+              suporte a acesso por máquinas remotas.<br />
+              existentes em um repositorio remoto.
+            </p>
+          </div>
+        </div>
+
+        <div class="box" style="margin-bottom: 50px" data-anime="top">
+          <h2>Baixa apenas as atualizações.</h2>
+          <div class="itens">
+            <p class="codigo">git pull</p>
+            <p class="comentario">
+              O git pull é um comando do Git usado para atualizar a versão local
+              de um repositório a partir de uma versão remota. Ele é um dos
+              quatro comandos que solicita a interação com a rede pelo Git.
+            </p>
+            <p class="comentario">
+              Para conhecer mais cliqui
+              <a href="https://devhints.io/git-log" target="_blank">aqui.</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
